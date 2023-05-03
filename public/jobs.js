@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //here we use let because it lets us re-declare  these variables later
   let showing = logonRegister;
   let token = null;
-
+// ask for more info about localStorage
   //here startDisplay is the event type to listen for. we create it on line 125
   document.addEventListener('startDisplay', async () => {
     showing = logonRegister;
