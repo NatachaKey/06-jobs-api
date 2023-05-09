@@ -1,4 +1,4 @@
-//import the model
+//import the User model
 const User = require('../models/User');
 const { StatusCodes } = require('http-status-codes');
 const { BadRequestError, UnauthenticatedError } = require('../errors'); //by default it takes index.js
