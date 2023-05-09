@@ -1,0 +1,98 @@
+body {
+  background-color: #f5d0f7;
+  font-family: 'Work Sans', sans-serif;
+  padding: 15px;
+  text-align: center;
+  color: #471e7e;
+}
+h1 {
+  color: rgba(12, 11, 11, 0.87);
+}
+p {
+  color: rgb(173, 45, 45);
+}
+
+button#logon-cancel,
+button#register-cancel,
+button#edit-cancel,
+.deleteButton {
+  background-image: linear-gradient(
+    rgba(184, 92, 92, 0.84),
+    rgba(204, 32, 32, 0.84) 50%
+  );
+}
+
+button {
+  margin-top: 10px;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(
+    rgba(179, 132, 201, 0.84),
+    rgba(110, 65, 168, 0.84) 50%
+  );
+  border-radius: 22px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
+    rgba(212, 168, 233, 0.4) 0 8px 12px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  line-height: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+    rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  padding: 20px;
+}
+
+button:hover {
+  background-image: linear-gradient(#b384c9, #946bc9 50%);
+}
+
+label,
+input,
+select {
+  margin: 10px;
+  font-family: 'Work Sans', sans-serif;
+}
+label {
+  text-transform: capitalize;
+}
+input,
+select {
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}
+
+th,
+td {
+  padding: 10px;
+  color: rgba(12, 11, 11, 0.87);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+@media (min-width: 768px) {
+  button {
+    font-size: 19px;
+    padding: 18px 34px;
+  }
+}
