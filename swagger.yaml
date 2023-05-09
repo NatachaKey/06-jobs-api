@@ -168,6 +168,8 @@ components:
       title: RegisteruserRequest
       required:
       - name
+      - email
+      - password
       type: object
       properties:
         name:
