@@ -174,8 +174,14 @@ components:
       properties:
         name:
           type: string
+        email:
+          type: string
+        password:
+          type: string
       example:
-        name: qqq
+        name: Nata
+        email: natalia@gmail.com
+        password: mypassword
     LoginUserRequest:
       title: LoginUserRequest
       required:
