@@ -23,8 +23,12 @@ paths:
               - $ref: '#/components/schemas/RegisteruserRequest'
               - example:
                   name: qqq
+                  email: natalia@gmail.com
+                  password: abcsecret
             example:
               name: qqq
+              email: natalia@gmail.com
+              password: abcsecret
         required: true
       responses:
         '200':
@@ -168,12 +172,20 @@ components:
       title: RegisteruserRequest
       required:
       - name
+      - email
+      - password
       type: object
       properties:
         name:
           type: string
+        email:
+          type: string
+        password:
+          type: string
       example:
-        name: qqq
+        name: Nata
+        email: natalia@gmail.com
+        password: mypassword
     LoginUserRequest:
       title: LoginUserRequest
       required:
