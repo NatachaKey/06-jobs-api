@@ -25,7 +25,12 @@ async function buildJobsTable(jobsTable, jobsTableHeader, token, message) {
     });
     const data = await response.json();
 
-    var children = [jobsTableHeader]; //why jobsTableHeader, is that because tr is a parent element, can represent an array  ?
+    var children = [jobsTableHeader]; 
+    //On lines 36 and 48, we do jobsTable.replaceChildren. This will replace all of the elements that are nested in <table id="jobs-table">...</table> 
+    //(in this case, this is any existing <tr> elements).
+    //= [jobsTableHeader] - because We want to make sure that when we do that, we still keep that header row <tr id="jobs-table-header">...</tr>. 
+    //So we just keep it here as the first value in our children array everytime.
+
     if (response.status === 200) {
       if (data.count === 0) {
         //  jobsTable.replaceChildren(...children); // clear this for safety
@@ -462,6 +467,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
         if (response.status === 200) {
           message.textContent = 'This job entry was sucessfully deleted';
+          thisEvent = new Event('startDisplay');
+          document.dispatchEvent(thisEvent);
         } else {
           // might happen if the list has been updated since last display
           message.textContent = 'The jobs entry was not found';
