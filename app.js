@@ -10,7 +10,13 @@ const rateLimiter = require('express-rate-limit');
 //Swagger 
 const swaggerUI = require('swagger-ui-express')
 const YAML = require('yamljs')
-const swaggerDocument = YAML.load('./swagger.yaml')
+//const swaggerDocument = YAML.load('./swagger.yaml')
+let swaggerDocument;
+if (process.env.ENVIRONMENT === "local") {
+    swaggerDocument = YAML.load('./swagger-local.yaml')
+} else {
+    swaggerDocument = YAML.load('./swagger.yaml')
+}
 
 const express = require('express');
 const app = express();
@@ -26,7 +32,6 @@ const jobsRouter = require('./routes/jobs');
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
-
 
 
 app.set('trust proxy', 1)
